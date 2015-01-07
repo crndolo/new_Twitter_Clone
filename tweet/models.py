@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Tweet(models.Model):
 	author 			= models.ForeignKey(User)
 	message 		= models.CharField(max_length = 160)
-	date_created 	= models.DateTimeField(auto_now = True)
+	date_created 	= models.DateTimeField('default date')
 	slug 			= models.SlugField(max_length = 50)
 
 	def __unicode__(self):
@@ -15,7 +15,7 @@ class Tweet(models.Model):
 class Retweet(models.Model):
 	retweeted_message 	= models.ForeignKey(Tweet)
 	retweeter 			= models.ForeignKey(User)
-	date_retweeted 		= models.DateTimeField(auto_now = True)
+	date_retweeted 		= models.DateTimeField('default date')
 
 	def __unicode__(self):
 		return unicode(self.retweeter)
@@ -24,7 +24,7 @@ class Reply(models.Model):
 	replier 			= models.ForeignKey(User)
 	message 			= models.ForeignKey(Tweet)
 	replied_message 	= models.CharField(max_length = 160)
-	reply_date 			= models.DateTimeField(auto_now = True)
+	reply_date 			= models.DateTimeField('default date')
 
 	def __unicode__(self):
 		return unicode(self.replier)
