@@ -3,6 +3,7 @@ from tweet import views
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', views.tweets, name='tweets'),
+    url(r'^$', views.latest_tweets, name='latest_tweets'),
+    url(r'^latest/$', views.tweets, name='tweets'),
     # url(r'^blog/', include('blog.urls')),
 )

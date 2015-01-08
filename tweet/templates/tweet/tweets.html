@@ -1,0 +1,11 @@
+<html>
+	<body>
+		{%for tweet in tweets%}
+			<h2>{{tweet.author}}</h2>
+			<p>{{tweet.message}}</p>
+			<i>{{tweet.slug}}</i>
+			<h4>{{tweet.date_created}}</h4>
+		{%endfor%}
+	</body>
+
+</html>

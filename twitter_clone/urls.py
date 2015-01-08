@@ -6,6 +6,6 @@ urlpatterns = patterns('',
     # url(r'^$', 'twitter_clone.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^tweet/', include('tweet.urls')),
+    (r'^tweet/', include('tweet.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
