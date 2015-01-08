@@ -1,11 +1,23 @@
-<html>
+{% load static %}
+<!DOCTYPE html>
+<html lang ="en">
+	<head>
+		<title> TWITTER CLONE </title>
+		<link rel ="stylesheet" type = "text/css" href = {% static "assets/css/style.css" %}>
+	</head>
 	<body>
-		{%for tweet in tweets%}
-			<h2>{{tweet.author}}</h2>
-			<p>{{tweet.message}}</p>
-			<i>{{tweet.slug}}</i>
-			<h4>{{tweet.date_created}}</h4>
-		{%endfor%}
+		<div class="content">
+			<div class="wrap">
+				{%for tweet in tweets%}
+					<div class="tweet">
+						<h2>{{tweet.author}}</h2>
+						<p>{{tweet.message}}</p>
+						<i>{{tweet.slug}}</i>
+						<h4>{{tweet.date_created}}</h4>
+					</div>
+				{%endfor%}
+			</div>
+		</div>
 	</body>
 
 </html>

@@ -1,0 +1,32 @@
+body{
+	background: #CEE3F6;
+}
+
+.content{
+	width: 800px;
+	background: #58ACFA;
+	margin: 0 auto;
+}
+.tweet{
+	border: solid 1px #999999;
+	background: #ffffff;
+	color:#333333;
+	text-align: left;
+	padding: 5px 15px;
+}
+
+.tweet h2{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.tweet h4{
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.wrap{
+	background: #ffffff;
+	width: 500px;
+	margin: 0 auto;
+}

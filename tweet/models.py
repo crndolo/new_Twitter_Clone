@@ -4,18 +4,18 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Tweet(models.Model):
-    author		= models.ForeignKey(User)
+    author			= models.ForeignKey(User)
     message 		= models.CharField(max_length = 160)
     date_created 	= models.DateTimeField('default date')
-    slug		= models.SlugField(max_length = 50)
+    slug			= models.SlugField(max_length = 50)
 
     def __unicode__(self):
 	return unicode(self.message)
 
 class Retweet(models.Model):
     retweeted_message 	= models.ForeignKey(Tweet)
-    retweeter		= models.ForeignKey(User)
-    date_retweeted	= models.DateTimeField('default date')
+    retweeter			= models.ForeignKey(User)
+    date_retweeted		= models.DateTimeField('default date')
 
     def __unicode__(self):
 	return unicode(self.retweeter)

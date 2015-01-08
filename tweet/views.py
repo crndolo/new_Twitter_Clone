@@ -17,4 +17,4 @@ def latest_tweets(request):
 	#return HttpResponse(html)
 	#name = "Ndolo"
 	#return render_to_response('tweets.html', {'name': name})
-	return render_to_response('tweets.html', {'tweets': Tweet.objects.all()})
+	return render_to_response('tweets.html', {'tweets': Tweet.objects.all().order_by('-date_created')})
